@@ -1,4 +1,5 @@
 一般来说 执行root权限的shell脚本方法是
+<br/>
 ``Java
 Process process = Runtime.getRuntime().exec("sh");
 OutputStream os = new DataOutputStream(process.getOutputStream());
@@ -7,6 +8,7 @@ os.writeBytes("exit\n");
 os.flush();
 process.waitFor();
 ``
+<br/>
 存在的问题是每次执行时都会提示“已经授予"xxx"超级用户权限"
 解决方案
 使用开源的android terminal simulator 进行改造，封装成了简单的api来执行，
