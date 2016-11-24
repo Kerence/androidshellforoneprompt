@@ -1,18 +1,11 @@
 一般来说 执行root权限的shell脚本方法是
 <br/>
-``Java
-Process process = Runtime.getRuntime().exec("sh");
-<br/>
-OutputStream os = new DataOutputStream(process.getOutputStream());
-<br/>
-os.writeBytes(command + "\n");
-<br/>
-os.writeBytes("exit\n");
-<br/>
-os.flush();
-<br/>
-process.waitFor();
-``
+`Process process = Runtime.getRuntime().exec("sh");`<br/>
+`OutputStream os = new DataOutputStream(process.getOutputStream());`<br/>
+`os.writeBytes(command + "\n");`<br/>
+`os.writeBytes("exit\n");`<br/>
+`os.flush();`<br/>
+`process.waitFor();`<br/>
 <br/>
 存在的问题是每次执行时都会提示“已经授予"xxx"超级用户权限"
 解决方案
