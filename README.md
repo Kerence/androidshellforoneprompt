@@ -2,10 +2,15 @@
 <br/>
 ``Java
 Process process = Runtime.getRuntime().exec("sh");
+<br/>
 OutputStream os = new DataOutputStream(process.getOutputStream());
+<br/>
 os.writeBytes(command + "\n");
+<br/>
 os.writeBytes("exit\n");
+<br/>
 os.flush();
+<br/>
 process.waitFor();
 ``
 <br/>
